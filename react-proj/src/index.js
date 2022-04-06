@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Product from "./component/product";
+import Products from "./component/products";
 import  ReactDOM  from "react-dom";
 
 const Elem = <h1>hi shaden</h1>
 ReactDOM.render(
-    <Product/>,
+    <Products/>,
     document.getElementById("root")
 )

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Products from "./component/products";
+import Products from "./component/fuctionProducts";
 import  ReactDOM  from "react-dom";
 
 

@@ -1,4 +1,4 @@
-import functionProduct from "./functionProduct";
+import Product from "./functionProduct";
 import { useState } from "react";
 
 const Products = () => {
@@ -9,7 +9,7 @@ const Products = () => {
     return ( 
         <>
             {products.map(item=>(
-                <product key={item.id} productName= {item.productName} count={item.count}></product>
+                <Product key={item.id} productName= {item.productName} count={item.count}/>
             )
             )}
         </>

@@ -21,18 +21,15 @@ class Product extends Component {
             return this.props.count;
         }
     }
+    
     handleIncrement = ()=>{
-        const {count} = this.props
-        this.setState({
-            count : count +1 
-        });
+        this.props.onIncrement(this.props.id)
     }
+
     handleDecrement = ()=>{
-        const {count} = this.props
-        this.setState({
-            count : count -1
-        });
+        this.props.onDecrement(this.props.id)
     }
+
 
     handleDelete = ()=>{
         this.props.onDelete(this.props.id)

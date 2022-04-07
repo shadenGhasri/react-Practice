@@ -13,10 +13,23 @@ class Products extends Component {
             <>
              <button onClick={this.handleIReset} className='m-2 btn btn-sm btn-success'>Reset</button>
              {this.state.products.map((p,index)=>(
-                 <Product onDelete = {this.handleDelete} key = {index} id = {p.id} count = {p.count} productName = {p.productName} />
+                 <Product  onIncrement = {this.handleIncrement} onDecrement = {this.handleDecrement} onDelete = {this.handleDelete} key = {index} id = {p.id} count = {p.count} productName = {p.productName} />
              ))}
             </>
         );
+    }
+    handleIncrement = (productID)=>{
+        const newProducts = [...this.state.products]
+        const index = newProducts.findIndex(p=> p.id === productID) 
+        newProducts[index].count += 1;
+        this.setState({products : newProducts})
+    }
+
+    handleDecrement = (productID)=>{
+        const newProducts = [...this.state.products]
+        const index = newProducts.findIndex(p=> p.id === productID) 
+        newProducts[index].count -= 1;
+        this.setState({products : newProducts})
     }
 
     handleDelete = (productId)=>{

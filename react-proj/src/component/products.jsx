@@ -11,6 +11,7 @@ class Products extends Component {
     render() { 
         return (
             <>
+             <button onClick={this.handleIReset} className='m-2 btn btn-sm btn-success'>Reset</button>
              {this.state.products.map((p,index)=>(
                  <Product onDelete = {this.handleDelete} key = {index} id = {p.id} count = {p.count} productName = {p.productName} />
              ))}
@@ -21,6 +22,14 @@ class Products extends Component {
     handleDelete = (productId)=>{
      const newProducts =  this.state.products.filter(p => p.id !== productId );
      this.setState({products : newProducts})
+    }
+
+    handleIReset = ()=>{
+       const newProducts = this.state.products.map(p=>{
+            p.count = 0 ;
+            return p;
+        });
+        this.setState({products : newProducts})
     }
 }
  

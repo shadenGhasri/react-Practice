@@ -1,9 +1,7 @@
 import "./product.css"
 import {Component} from 'react';
 class Product extends Component {
-    state = {
-        count : this.props.count
-      } 
+ 
     render() { 
         const {productName} = this.props
         return (
@@ -17,20 +15,20 @@ class Product extends Component {
         );
     }
     format(){
-        if(this.state.count === 0){
+        if(this.props.count === 0){
             return "zero"
         }else{
-            return this.state.count;
+            return this.props.count;
         }
     }
     handleIncrement = ()=>{
-        const {count} = this.state
+        const {count} = this.props
         this.setState({
             count : count +1 
         });
     }
     handleDecrement = ()=>{
-        const {count} = this.state
+        const {count} = this.props
         this.setState({
             count : count -1
         });

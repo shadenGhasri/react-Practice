@@ -2,7 +2,7 @@ import "./product.css"
 import {Component} from 'react';
 class Product extends Component {
     state = {
-        count : 0
+        count : this.props.count
       } 
     render() { 
         const {productName} = this.props

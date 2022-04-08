@@ -6,7 +6,10 @@ class App extends Component {
     // state = {  } 
     render() { 
         return (
-            <><Products /><Navbar /></>
+            <>
+                <Navbar />
+                <Products />
+            </>
         );
     }
 }

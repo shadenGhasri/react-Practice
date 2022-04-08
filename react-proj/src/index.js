@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Products from "./component/products";
 import  ReactDOM  from "react-dom";
+import App from "./App";
 
 
 ReactDOM.render(
-    <Products/>,
+    <App/>,
     document.getElementById("root")
 )

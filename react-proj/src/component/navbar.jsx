@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Navbar extends Component {
-    state = {  } 
-    render() { 
-        return (
-            <nav className='navbar navbar-light bg-light'>
-                <div className="container-fluid">
-                    <a href="#" className="navbar-brand">
-                    <i class="bi bi-basket2-fill"></i> {5}
-                    </a>
-                </div>
-            </nav>
-        );
-    }
+  state = {};
+  render() {
+    return (
+      <nav className="navbar navbar-light bg-light">
+        <div className="container-fluid">
+          <a href="#" className="navbar-brand">
+            <i class="bi bi-basket2-fill"></i> {this.calculateSum()}
+          </a>
+        </div>
+      </nav>
+    );
+  }
+  calculateSum = () => {
+    let sum = 0;
+    this.props.products.forEach((p) => {
+      sum += p.count;
+    });
+    return sum;
+  };
 }
- 
+
 export default Navbar;

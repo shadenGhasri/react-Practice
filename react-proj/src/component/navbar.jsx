@@ -7,7 +7,7 @@ class Navbar extends Component {
             <nav className='navbar navbar-light bg-light'>
                 <div className="container-fluid">
                     <a href="#" className="navbar-brand">
-                        Navbar {5}
+                    <i class="bi bi-basket2-fill"></i> {5}
                     </a>
                 </div>
             </nav>
